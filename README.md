@@ -1,0 +1,2 @@
+# python_anvarnarz_darslari_uchun
+Anvar Narzullayevning online darslaridagi amaliyotlarda bajarilgan vazifalar uchun
