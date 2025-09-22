@@ -1,0 +1,26 @@
+33_dars: FAYLLAR BILAN ISHLASH
+Ushbu darsda pythonda fayllar bilan ishlashni o'rgandik.
+Pythonda biror bir fayldagi ma'lumotlar kerak bo'lsa open('fayl') funksiyasi bilan ishlanadi.
+Pythonda faylni ochib u bilan ishlaganimizdan so'ng uni close('fayl') metodi bilan yopib qo'yish kerak,
+chunki agar fayl ochiq qolsa, dasturimiz ishlamay qolsa, kompyuter ochib qolsa va hokazo shu kabi 
+sabablarga ko'ra fayl ochiq qolib ketsa faylga zarar yetishi mumkin, bu esa katta ma'lumotli fayllar, muhim fayllar bilan ishlaganda 
+juda havfli hisoblanadi. Eng havfsiz yo'l faylni with open() operatori bilan ochish hisoblanadi. Bu usulda with operatori fayl bilan ishlab 
+bo'lganimizdan so'ng faylni darxol yopib qo'yadi, yani with operatorining vazifasi shundan iborat bo'ladiki, biz fayl bilan 
+zarur amaliyotlarni withning tana qismida qilganimizdan so'ng u faylni yopib qo'yaveradi.
+Faylni ochganimizda fayl va dasturimiz kompyuter xotirasida bitta faylda joylashgan bo'lishi kerak, agar bunday bo'lmasa 
+fayl manzilini to'liqroq kiritish talab qilinadi. Agar fayl dastur turgan papkada yana bitta papkaga solingan bo'lsa
+o'sha papkani nomi ham aytib o'tilishi kerak. Masalan: attribute = open('papka1/fayl') kabi.
+Paythonda papkalar orasi manzil yoilayotganda '/' belgi bilan yoziladi, kompyuterda esa '\' belgi bilan,
+agar istasak '\\' belgidan ham foydalanish mumkin. Faylni ochishni ko'rdik endi uni o'qishga keladigan bo'lsak o'qish read()
+funksiyasi orqali amalga oshiriladi. Bazida fayni qatorma-qator o'qishga to'g'ri keladi, shunda readlines() funksiyasi ishlatiladi.
+Faylga yozish uchun esa faylni ochishda open() funksiyasiga 'w' (write) parametrini berish kerak bo'ladi.
+Shunda biz ochgan faylga yangi ma'lumot yozish mumkin bo'ladi. Ammo bunday ochishda agar ochilayotgan fayl xotirada bo'lsa uning ichidagi 
+eski ma'lumotlar o'chib ketadi va biz yozgan ma'lumotlar yangidan saqlanadi, agar open() funksiyaga berilgan fayl xotirada bo'lmasa
+xotiradan shu nom ostida yangi fayl ochiladi va ma'lumot yozilishi davom etadi. Ammo ko'p xollarda eski ma'lumotlarni saqlab qolgan xolda 
+faylga yangi ma'lumotlarni ham qo'shish talab qilinadi bunday vaziyatda fayl ochilishida open() funksiyasiga 'a' (append) 
+parametri beriladi, agar xotirada o'sha fayl mavjud bo'lsa shu faylni ochadi va ma'lumotlarni qo'shadi, xotirada 
+mavjud bo'lmasa yangi fayl ochib davom etadi. Shuningdek ko'p xollarda faylga faqat matn formatdagi ma'lumotlar emas balki lug'at, ro'yxat 
+va hokazo turli ma'lumotlar, o'zgaruvchilarni saqlashga to'gri keladi bunday vaziyatlarda PICKLE (tuzlangan bodring) fayllarga ma'lumotlarni
+saqlash talab etiladi. Buning uchun avvalo PICKLE import qilinadi. PICKLE faylga yozishda dump() funksiyasidan foydalaniladi, open() 
+funksiyasiga ikkinchi parameter sifatida 'wb' (write binary) beriladi, PICKLE dan o'qish uchun esa load() funksiyasi
+ishlatiladi open() funksiyasi parameter sifatida 'rb' (read binary) ni oladi.
